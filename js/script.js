@@ -39,8 +39,9 @@ function createNumber(i) {
 
 var x = document.getElementById("content").clientHeight; 
 
-var contentSizeVH = 100 * x / $(window).height();
+var contentSizeVH = 100 * x / window.innerHeight;
 var lines = contentSizeVH / 3.2
+console.log(x, contentSizeVH, lines);
 
 // var xEm = $(x).toEm();
 // console.log(xEm);

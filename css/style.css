@@ -9,6 +9,7 @@ body {
 
 * {
     font-family: Consolas, 'Courier New', monospace;
+    line-height:3.2vh;
     
 }
 
@@ -69,6 +70,9 @@ body {
 .content h3, p {
     font-size: 2vh;
 }
+
+
+
 /* Smartphones (portrait and landscape) ----------- */
 /* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 
