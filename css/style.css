@@ -2,7 +2,7 @@ body {
     background: #26242a;
     color: #d8dad1;
      /*1.4 em universal height */
-    line-height:1.4em;
+    line-height:3.2vh;
 }
 
 
@@ -44,7 +44,7 @@ body {
     height: 100%;
     width: 100%;
     align-items: baseline;
-    gap: 1.5em;
+    gap: 1.5ex;
 }
 
 
@@ -61,16 +61,16 @@ body {
 
 .numBar ul {
     list-style: none;
-    font-size: 1em;
+    font-size: 2vh;
   }
 
 
 
 .content h3, p {
-    font-size: 1em;
+    font-size: 2vh;
 }
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
 
     .numBar ul {
         font-size: 10px;
@@ -78,7 +78,7 @@ body {
     .content h3, p {
         font-size: 10px;
     }
-  }
+  } */
 
 
 
