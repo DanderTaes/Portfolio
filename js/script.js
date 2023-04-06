@@ -44,7 +44,7 @@ console.log(xEm);
 var lines = Math.round(parseFloat(xEm.replace('em', ''))/1.4);
 console.log(lines);
 
-if (320 <$(window).width() < 480) {
+if (320 <$(window).width() && $(window).width()< 480) {
     console.log("pequeñaaa")
     lines += 4
 }
