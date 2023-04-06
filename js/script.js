@@ -38,11 +38,16 @@ $.fn.toPx = function(settings){
 //get how many lines there are
 
 var x = document.getElementById("content").clientHeight; 
-console.log(x);
+
 var xEm = $(x).toEm();
-var lines = Math.round(parseFloat(xEm.replace('em', ''))/1.4)-1;
+console.log(xEm);
+var lines = Math.round(parseFloat(xEm.replace('em', ''))/1.4);
 console.log(lines);
 
+if (320 <$(window).width() < 480) {
+    console.log("pequeñaaa")
+    lines += 4
+}
 
 
 for (let i = 0; i < lines; i++) {
