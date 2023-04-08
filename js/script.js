@@ -1,3 +1,5 @@
+// how many more lines do we have at the end
+const wiggleroom = 2
 // function to create a list item for each line of content
 function createNumber(i) {
   const li = document.createElement("li");
@@ -21,9 +23,7 @@ function updateNumbers() {
   const contentHeight = content.clientHeight;
   const contentSizeVH = (100 * contentHeight) / window.innerHeight;
   if (window.innerWidth <= 600) {
-    console.log("hello im small");
-    a = 0;
-    lineHeight = 2.5;
+    lineHeight = 2;
   }
   const numLines = Math.floor(contentSizeVH / lineHeight);
 
@@ -31,8 +31,8 @@ function updateNumbers() {
   clearNumbers();
 
   // create a list item for each line of content
-  for (let i = 0; i <= numLines; i++) {
-    createNumber(i+a);
+  for (let i = 1; i <= numLines+wiggleroom; i++) {
+    createNumber(i);
   }
 }
 

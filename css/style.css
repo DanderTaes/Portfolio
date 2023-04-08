@@ -51,6 +51,8 @@ body {
     width: 100%;
     align-items: baseline;
     gap: 1.5ex;
+    margin-left: 0;
+    
 }
 
 
@@ -59,18 +61,21 @@ body {
     left: 0;
     z-index: 50;
     display: flex;
-    /* justify-content: space-around; */
     flex-flow: column;
     color: #858585;
+    /* color: red; */
+    margin-left: 0;
+    width: 6vh;
     text-align: right;
+    align-items: flex-end;
+    /* background-color: aqua; */
+    
 }
 
 .numBar ul {
     list-style: none;
     font-size: 2.4vh;
 }
-
-
 
 .content h3, p {
     font-size: 2.4vh;
@@ -82,13 +87,22 @@ body {
 @media only screen and (max-width: 600px) {
     
     body {
-        line-height:2.5vh;
+        line-height:2vh;
     }
     .numBar ul {
-        font-size: 2vh;
+        font-size: 1.3vh;
+        color:purple;
     }    
     .content h3, p {
-        font-size: 2vh;
+        font-size: 1.3vh;
+    }
+    .numBar {
+        width: 2.6vh;
+
+    }
+    .navBar ul li a {
+        font-size: 1.3vh;
+        padding: 6px 8px;
     }
     
   }
