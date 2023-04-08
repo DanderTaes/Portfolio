@@ -1,3 +1,4 @@
+
 body {
     background: #26242a;
     color: #d8dad1;
@@ -9,7 +10,6 @@ body {
 
 * {
     font-family: Consolas, 'Courier New', monospace;
-    line-height:3.2vh;
     
 }
 
@@ -79,17 +79,19 @@ body {
 
 
 /* Smartphones (portrait and landscape) ----------- */
-/* @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-
+@media only screen and (max-width: 600px) {
+    
+    body {
+        line-height:2.5vh;
+    }
     .numBar ul {
-        font-size: 10px;
-    }
+        font-size: 2vh;
+    }    
     .content h3, p {
-        font-size: 10px;
+        font-size: 2vh;
     }
-  } */
-
-
+    
+  }
 
 
 /* TODO: implementar media thingy : @media() */

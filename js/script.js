@@ -16,10 +16,15 @@ function createNumber(i) {
   // function to calculate and create the correct number of list items based on the content height
   function updateNumbers() {
     // calculate the number of lines of content based on its height
+    var lineHeight = 3.2;
     const content = document.getElementById("content");
     const contentHeight = content.clientHeight;
     const contentSizeVH = (100 * contentHeight) / window.innerHeight;
-    const numLines = Math.floor(contentSizeVH / 3.2);
+    if (window.innerWidth <= 600){
+        console.log("hello im small")
+        lineHeight = 2.5    
+    }
+    const numLines = Math.floor(contentSizeVH / lineHeight);
     
     // remove any existing list items from the numbers list
     clearNumbers();
