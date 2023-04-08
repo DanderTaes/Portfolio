@@ -1,6 +1,3 @@
-
-// create list of numbers until the page ends
-
 const ul = document.getElementById("numbers");
 
 function createNumber(i) {
@@ -9,16 +6,16 @@ function createNumber(i) {
     ul.appendChild(li);
 }
 
+// create temporary li element to get its height
+var liTemp = document.createElement("li");
+liTemp.innerHTML = "0";
+ul.appendChild(liTemp);
+var liHeight = liTemp.offsetHeight;
+ul.removeChild(liTemp);
 
-//get how many lines there are
+var contentHeight = document.getElementById("content").clientHeight;
+var numLines = Math.ceil(contentHeight / liHeight);
 
-var x = document.getElementById("content").clientHeight; 
-
-var contentSizeVH = 100 * x / window.innerHeight;
-var lines = contentSizeVH / 3.2
-// console.log(x, contentSizeVH, lines);
-
-
-for (let i = 0; i < lines; i++) {
+for (let i = 0; i < numLines; i++) {
     createNumber(i+1);
 }
