@@ -12,7 +12,7 @@ function clearNumbers() {
     numbers.removeChild(numbers.firstChild);
   }
 }
-
+var a = 1;
 // function to calculate and create the correct number of list items based on the content height
 function updateNumbers() {
   // calculate the number of lines of content based on its height
@@ -22,6 +22,7 @@ function updateNumbers() {
   const contentSizeVH = (100 * contentHeight) / window.innerHeight;
   if (window.innerWidth <= 600) {
     console.log("hello im small");
+    a = 0;
     lineHeight = 2.5;
   }
   const numLines = Math.floor(contentSizeVH / lineHeight);
@@ -30,8 +31,8 @@ function updateNumbers() {
   clearNumbers();
 
   // create a list item for each line of content
-  for (let i = 1; i <= numLines; i++) {
-    createNumber(i);
+  for (let i = 0; i <= numLines; i++) {
+    createNumber(i+a);
   }
 }
 
