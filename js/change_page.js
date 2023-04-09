@@ -10,7 +10,7 @@ function runCodePy() {
 
     if (commands.includes(code)){
         if (ids.includes(codePy)) {
-            changePage(codePy)
+            openPage(document.getElementById(codePy).parentElement); //passing the li that we want to open
         }
         else{
             createTabs(codePy);
@@ -40,12 +40,11 @@ function createTabs(name){ //name with .py
     //change root path
     document.getElementById("rootText").textContent = ("Ander Gaytán > "+ root);
     openPage(clone);
-    changePage(root);
     
 }
 
 //select page
-function openPage(selected = undefined) {
+function openPage(selected = undefined) { //pass x object
 
     //remove all selected tabs    
     var openedTabs = document.getElementsByClassName("tabs");
@@ -59,6 +58,7 @@ function openPage(selected = undefined) {
     }
     else if(selected!= undefined){
         selected.id = "selected";
+        changePage(selected.lastChild.id);
     }  
     
 

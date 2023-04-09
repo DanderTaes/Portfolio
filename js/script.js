@@ -26,7 +26,7 @@ function updateNumbers() {
   const contentHeight = content.clientHeight;
   const contentSizeVH = (100 * contentHeight) / window.innerHeight;
   if (window.innerWidth <= 600) {
-    lineHeight = 2;
+    lineHeight =  2.8;
   }
   const numLines = Math.floor(contentSizeVH / lineHeight);
   // remove any existing list items from the numbers list
