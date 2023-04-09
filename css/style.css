@@ -4,6 +4,8 @@ body {
     color: #d8dad1;
      /*1.4 em universal height */
     line-height:3.2vh;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -18,31 +20,63 @@ body {
     font-style: italic;
 }
 
-
 .navBar ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding-left: 0;
     overflow: hidden;
-    background-color: #1e1e1e;
+    background-color: #252526;
 }
 
 .navBar ul li {
     float: left;
+    background-color: #252526;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+
+#selected {
+    background-color: #1e1e1e;
 }
   
 .navBar ul li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+
     text-decoration: none;
-}
-  /* Change the link color to #111 (black) on hover */
-.navBar ul li a:hover {
-    background-color: #111;
+    
+    display: inline-block;
 }
 
+#run {
+    width: 2vh;
+    height: 2vh;
+}
+  /* Change the link color to #111 (black) on hover */
+/* .navBar ul li a:hover {
+    background-color: #111;
+} */
+
+.rootPath {
+    width: 100%;
+    background-color: #1f1f1f;
+    /* border-style: solid; */
+    border-top: 1px solid #945e99;
+    /* border-top: #427bee; */
+}
+
+.rootPath p {
+    margin: 0;
+    padding-left: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    line-height:2vh;
+    height: 2vh;
+    font-size: 2vh;
+}
 
 .flex_container {
     display: flex;
@@ -50,11 +84,11 @@ body {
     height: 100%;
     width: 100%;
     align-items: baseline;
-    gap: 1.5ex;
+    gap: 2ex;
     margin-left: 0;
+    margin-top: 0;
     
 }
-
 
 /* Num bar */
 .numBar {
@@ -67,19 +101,43 @@ body {
     margin-left: 0;
     width: 6vh;
     text-align: right;
+    margin-top: 0;
+    padding-top: 0;
     align-items: flex-end;
     /* background-color: aqua; */
-    
+    justify-content: center;    
 }
 
 .numBar ul {
     list-style: none;
     font-size: 2.4vh;
+    margin-top: 0;
+
 }
 
 .content h3, p {
     font-size: 2.4vh;
 }
+
+#executableCode {
+    background-color: transparent;
+    color: #d8dad1;
+    border: none;
+    font-size: 2.4vh;
+}
+
+#executableCode:focus {
+    outline-offset: 0px !important;
+    outline: none !important;
+    }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #777d7f;
+    text-decoration: underline wavy rgb(159, 58, 65);
+    opacity: 1; /* Firefox */
+    
+  }
+
 
 
 
@@ -88,24 +146,49 @@ body {
     
     body {
         line-height:2vh;
+        
     }
+
+    .navBar ul li a {
+        font-size: 1.3vh;
+        padding-top: 0.5vh;
+        padding-bottom: 0.5vh;
+        padding-left: 0.5vh;
+        padding-right: 0.5vh;
+    }
+
+    #run {
+        width: 1vh;
+        height: 1vh;
+    }
+
+    .rootPath p {
+        margin: 0;
+        padding-left: 1vh;
+        padding-top: 0.6vh;
+        padding-bottom: 0.6vh;
+        line-height:1.5vh;
+        height: 1.5vh;
+        font-size: 1.1vh;
+    }
+
     .numBar ul {
         font-size: 1.3vh;
         color:purple;
     }    
+
     .content h3, p {
         font-size: 1.3vh;
     }
+
     .numBar {
         width: 2.6vh;
 
     }
-    .navBar ul li a {
+    
+    #executableCode{
         font-size: 1.3vh;
-        padding: 6px 8px;
     }
+
     
   }
-
-
-/* TODO: implementar media thingy : @media() */

@@ -6,7 +6,7 @@
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <title>Ander Gaytán - Programmer</title>
        <link rel="stylesheet" type="text/css" href="css/style.css">
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+       <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
         
     <!-- <link rel="icon" type="image/png" href="images/SeximalLogo.png"> -->
    </head>
@@ -15,9 +15,14 @@
 
     <nav class="navBar">
         <ul>
-            <li><a href="#calculatorSpace">Seximal Calculator</a></li>
+            <li id="selected"><a href="#Text">Home.py</a> <a href="http://ww1.thispagewillneverload.com/" target="_blank" style="color: #858585;">x</a></li>
+            <li style="float:right"><a class="active" onclick='return runCode()'><img src="images/greenArrow.png" alt="Run" id="run"></a></li>
         </ul>
     </nav>
+
+    <div class="rootPath">
+        <p>Ander Gaytán > Home.py</p>
+    </div>
     
     <div  class="flex_container">
         <div class="numBar">
@@ -27,22 +32,26 @@
 
         </div>
         <div class="content" id="content">
-            <div id="WhySeximal">
+            <div id="Text">
                 <h3 style="margin: 0; color: rgb(162, 105, 181); ">Hi, my name is Ander! And this is what I do.</h3>
                 <br/>
                 <p style="margin: 0">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sodales finibus. Cras volutpat, leo eget molestie finibus, justo lectus porttitor purus, at accumsan mauris magna porttitor dolor. Donec quis dictum mauris. Vestibulum molestie facilisis eros, nec accumsan metus imperdiet eget. Vivamus tristique tellus quis ipsum tempus eleifend. Cras porttitor porta hendrerit. Maecenas ex ligula, scelerisque nec fermentum sed, convallis non purus. Cras pulvinar, lorem tincidunt tincidunt lacinia, lacus felis rutrum urna, sit amet sollicitudin metus ante nec libero.
                 <br/><br/>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sodales finibus. Cras volutpat, leo eget molestie finibus, justo lectus porttitor purus, at accumsan mauris magna porttitor dolor. Donec quis dictum mauris. Vestibulum molestie facilisis eros, nec accumsan metus imperdiet eget. Vivamus tristique tellus quis ipsum tempus eleifend. Cras porttitor porta hendrerit. Maecenas ex ligula, scelerisque nec fermentum sed, convallis non purus. Cras pulvinar, lorem tincidunt tincidunt lacinia, lacus felis rutrum urna, sit amet sollicitudin metus ante nec libero.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sodales finibus. Cras volutpat, leo eget molestie finibus, justo lectus porttitor purus, at accumsan mauris magna porttitor dolor. Donec quis dictum mauris. Vestibulum molestie facilisis eros, nec accumsan metus imperdiet eget. Vivamus tristique tellus quis ipsum tempus eleifend. Cras porttitor porta hendrerit. Maecenas ex ligula, scelerisque nec fermentum sed, convallis non purus. Cras pulvinar, lorem tincidunt tincidunt lacinia, lacus felis rutrum urna, sit amet sollicitudin metus ante nec libero.
                 <br/><br/>
                     <em class="comments">//Try typing the following: proyects()</em>
+                <br/>
+                    <em class="comments">//Use the run button on the top right (green arrow)</em>
                 </p>
+                <input type="text" id="executableCode" placeholder="Type code here..." autocomplete="off"></input>
     
 
             </div>
         </div>
     </div>
     <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/change_page.js">ç</script>
    </body>
            
 </html>
