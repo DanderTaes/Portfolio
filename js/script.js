@@ -19,14 +19,16 @@ var a = 1;
 function updateNumbers() {
   // calculate the number of lines of content based on its height
   var lineHeight = 3.2;
-  const content = document.getElementById("content");
+  const contentName = document.getElementById("selected").lastChild.id.replace(".py", "");
+  const content = document.getElementById(contentName);
+ 
+
   const contentHeight = content.clientHeight;
   const contentSizeVH = (100 * contentHeight) / window.innerHeight;
   if (window.innerWidth <= 600) {
     lineHeight = 2;
   }
   const numLines = Math.floor(contentSizeVH / lineHeight);
-
   // remove any existing list items from the numbers list
   clearNumbers();
 
@@ -36,8 +38,6 @@ function updateNumbers() {
   }
 }
 
-// create the initial list of numbers
-updateNumbers();
 
 // debounce function
 function debounce(func, delay) {

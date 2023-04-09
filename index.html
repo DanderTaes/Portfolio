@@ -14,14 +14,15 @@
    <body>
 
     <nav class="navBar">
-        <ul>
-            <li id="selected"><a href="#Text">Home.py</a> <a href="http://ww1.thispagewillneverload.com/" target="_blank" style="color: #858585;">x</a></li>
-            <li style="float:right"><a class="active" onclick='return runCode()'><img src="images/greenArrow.png" alt="Run" id="run"></a></li>
+        <ul id="navTable">
+            <li id="homeButton" style="float:left"><a onclick='return home()'>H</a></li>
+            <li id="selected" class="tabs"><a id="pageName" onclick="return openPage.call(this)">home.py</a> <a id="home.py" class="exit" onclick='return exitWindow.call(this);' target="_blank" style="color: #858585;">x</a></li>
+            <li style="float:right"><a onclick='return runCodePy()'><img src="images/greenArrow.png" alt="Run" id="run"></a></li>
         </ul>
     </nav>
 
     <div class="rootPath">
-        <p>Ander Gaytán > Home.py</p>
+        <p id="rootText">Ander Gaytán > home.py</p>
     </div>
     
     <div  class="flex_container">
@@ -31,27 +32,55 @@
             </ul>
 
         </div>
-        <div class="content" id="content">
-            <div id="Text">
+        <div class="content" id="closed">
+        </div>
+        <div class="content" id="home">
+            <div class="Text">
                 <h3 style="margin: 0; color: rgb(162, 105, 181); ">Hi, my name is Ander! And this is what I do.</h3>
                 <br/>
                 <p style="margin: 0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sodales finibus. Cras volutpat, leo eget molestie finibus, justo lectus porttitor purus, at accumsan mauris magna porttitor dolor. Donec quis dictum mauris. Vestibulum molestie facilisis eros, nec accumsan metus imperdiet eget. Vivamus tristique tellus quis ipsum tempus eleifend. Cras porttitor porta hendrerit. Maecenas ex ligula, scelerisque nec fermentum sed, convallis non purus. Cras pulvinar, lorem tincidunt tincidunt lacinia, lacus felis rutrum urna, sit amet sollicitudin metus ante nec libero.
+                    This is my strange portfolio. It's a IDE! Well kind of... You can write code at the last line of this page. You can access all my projects
                 <br/><br/>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas blandit sodales finibus. Cras volutpat, leo eget molestie finibus, justo lectus porttitor purus, at accumsan mauris magna porttitor dolor. Donec quis dictum mauris. Vestibulum molestie facilisis eros, nec accumsan metus imperdiet eget. Vivamus tristique tellus quis ipsum tempus eleifend. Cras porttitor porta hendrerit. Maecenas ex ligula, scelerisque nec fermentum sed, convallis non purus. Cras pulvinar, lorem tincidunt tincidunt lacinia, lacus felis rutrum urna, sit amet sollicitudin metus ante nec libero.
                 <br/><br/>
-                    <em class="comments">//Try typing the following: proyects()</em>
+                    <em class="comments">//Try typing the following: projects()</em>
                 <br/>
                     <em class="comments">//Use the run button on the top right (green arrow)</em>
                 </p>
-                <input type="text" id="executableCode" placeholder="Type code here..." autocomplete="off"></input>
-    
-
+                <input class="executableCode" type="text" id="homeCode" placeholder="Type code here..." autocomplete="off"></input>
             </div>
         </div>
+        <div class="content" id="projects">
+            <div class="Text">
+                <h3 style="margin: 0; color: rgb(162, 105, 181); ">Hi, these are my projects</h3>
+                <br/>
+                    <em class="comments">//Try typing the following: projects()</em>
+                <br/>
+                    <em class="comments">//Use the run button on the top right (green arrow)</em>
+                </p>
+                <input class="executableCode" type="text" id="projectsCode" placeholder="Type code here..." autocomplete="off"></input>
+            </div>
+        </div>
+        
+        <div class="content" id="art">
+            <div class="column">
+                <h3 style="margin: 0; color: rgb(162, 105, 181); ">Hi, I like art too!</h3>
+                <br/>
+                    <em class="comments">//Try typing the following: projects()</em>
+                <br/>
+                    <em class="comments">//Use the run button on the top right (green arrow)</em>
+                </p>
+                <input class="executableCode" type="text" id="projectsCode" placeholder="Type code here..." autocomplete="off"></input>
+            </div>
+            <div class="column">
+
+            </div>
+                
+        </div>
+        
     </div>
-    <script type="text/javascript" src="js/script.js"></script>
-    <script type="text/javascript" src="js/change_page.js">ç</script>
+    <script type="text/javascript" src="js/script.js" defer></script>
+    <script type="text/javascript" src="js/change_page.js" defer></script>
    </body>
            
 </html>

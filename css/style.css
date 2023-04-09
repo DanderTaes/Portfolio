@@ -1,36 +1,33 @@
-
 body {
     background: #26242a;
     color: #d8dad1;
-     /*1.4 em universal height */
-    line-height:3.2vh;
+    /*1.4 em universal height */
+    line-height: 3.2vh;
     margin: 0;
     padding: 0;
+    font-size: 2.4vh;
 }
 
 
 
 * {
     font-family: Consolas, 'Courier New', monospace;
-    
+
 }
 
-.comments { 
-    color: #777d7f;
-    font-style: italic;
-}
 
+/* NAVIGATION BAR */
 .navBar ul {
     list-style-type: none;
     margin: 0;
     padding-left: 0;
     overflow: hidden;
-    background-color: #252526;
+    background-color: #2d2d2d;
 }
 
 .navBar ul li {
     float: left;
-    background-color: #252526;
+    background-color: #2d2d2d;
     padding-top: 1vh;
     padding-bottom: 1vh;
     padding-left: 2vh;
@@ -40,14 +37,24 @@ body {
 #selected {
     background-color: #1e1e1e;
 }
-  
+
+.tabs:hover {
+    cursor: pointer;
+}
+
+#homeButton:hover {
+    cursor: pointer;
+
+}
+
+
 .navBar ul li a {
     display: block;
     color: white;
     text-align: center;
 
     text-decoration: none;
-    
+
     display: inline-block;
 }
 
@@ -55,11 +62,14 @@ body {
     width: 2vh;
     height: 2vh;
 }
-  /* Change the link color to #111 (black) on hover */
+
+/* Change the link color to #111 (black) on hover */
 /* .navBar ul li a:hover {
     background-color: #111;
 } */
 
+
+/* ROOT */
 .rootPath {
     width: 100%;
     background-color: #1f1f1f;
@@ -73,7 +83,7 @@ body {
     padding-left: 3vh;
     padding-top: 1vh;
     padding-bottom: 1vh;
-    line-height:2vh;
+    line-height: 2vh;
     height: 2vh;
     font-size: 2vh;
 }
@@ -87,7 +97,7 @@ body {
     gap: 2ex;
     margin-left: 0;
     margin-top: 0;
-    
+
 }
 
 /* Num bar */
@@ -105,52 +115,71 @@ body {
     padding-top: 0;
     align-items: flex-end;
     /* background-color: aqua; */
-    justify-content: center;    
+    justify-content: center;
 }
 
 .numBar ul {
     list-style: none;
-    font-size: 2.4vh;
+
     margin-top: 0;
 
 }
 
-.content h3, p {
-    font-size: 2.4vh;
+/* CONTENT */
+.comments {
+    color: #777d7f;
+    font-style: italic;
 }
 
-#executableCode {
+.executableCode {
     background-color: transparent;
     color: #d8dad1;
     border: none;
     font-size: 2.4vh;
+
 }
 
-#executableCode:focus {
+.executableCode:focus {
     outline-offset: 0px !important;
     outline: none !important;
-    }
+}
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #777d7f;
     text-decoration: underline wavy rgb(159, 58, 65);
-    opacity: 1; /* Firefox */
-    
-  }
+    opacity: 1;
+    /* Firefox */
+
+}
+
+/* #art {
+    display: flex; 
+    background-color: #945e99;
+}
+
+#art .columns{
+    flex: 50%;
+    width: 100%;
+    background-color: aqua;
+} */
+
+
 
 
 
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-width: 600px) {
-    
+
     body {
-        line-height:2vh;
-        
+        line-height: 2.8vh;
+        font-size: 1.8vh;
+
     }
 
     .navBar ul li a {
-        font-size: 1.3vh;
+
         padding-top: 0.5vh;
         padding-bottom: 0.5vh;
         padding-left: 0.5vh;
@@ -167,28 +196,19 @@ body {
         padding-left: 1vh;
         padding-top: 0.6vh;
         padding-bottom: 0.6vh;
-        line-height:1.5vh;
+        line-height: 1.5vh;
         height: 1.5vh;
-        font-size: 1.1vh;
-    }
-
-    .numBar ul {
-        font-size: 1.3vh;
-        color:purple;
-    }    
-
-    .content h3, p {
-        font-size: 1.3vh;
+        font-size: 1.6vh;
     }
 
     .numBar {
+        font-size: 1.7vh;
         width: 2.6vh;
 
     }
-    
-    #executableCode{
-        font-size: 1.3vh;
+
+    .executableCode {
+        font-size: 1.8vh;
     }
 
-    
-  }
+}
