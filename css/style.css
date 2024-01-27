@@ -131,6 +131,15 @@ body {
     font-style: italic;
 }
 
+.comments a{
+    color: #515e86;
+}
+
+.comments a:hover {
+    color: #775186;
+    cursor: pointer;
+}
+
 .executableCode {
     background-color: transparent;
     color: #d8dad1;

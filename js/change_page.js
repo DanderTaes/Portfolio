@@ -1,14 +1,23 @@
 //detect when the run button is pressed
-function runCodePy() {
+function runCodePy(clicked="") {
     var selectedTabName = document.getElementById("selected").lastChild.id.replace(".py", ""); //get name of the selected tab
-    var code = document.getElementById(selectedTabName+"Code").value;
+    if (clicked == ""){
+        var code = document.getElementById(selectedTabName+"Code").value;
+    }
+    else{
+        var code = clicked
+    }
     const commands = ["projects()", "art()"];
     code = code.replace(/[\s.]+/g, '');
     var codePy = code.toLowerCase().replace("()", ".py");
     var openedTabs = document.getElementsByClassName("tabs");
     var ids = Array.from(openedTabs).map((element) => element.lastChild.id);
-
-    if (commands.includes(code)){
+    console.log(clicked);
+    if (code == "seximal()" || code == "seximalCalculator()" || code == "seximal_calculator()" || code == "calculator()"){
+        
+        window.open("https://seximalcalculator.dander.es");
+    }
+    else if (commands.includes(code)){
         if (ids.includes(codePy)) {
             openPage(document.getElementById(codePy).parentElement); //passing the li that we want to open
         }
@@ -22,13 +31,16 @@ function runCodePy() {
     }
 }
 
-function home() {
-    var openedTabs = document.getElementsByClassName("tabs");
-    var ids = Array.from(openedTabs).map((element) => element.lastChild.id);
-    if (!ids.includes("home.py")){ //muy cutre sry
-        document.getElementById("navTable").innerHTML+= "<li id='' class='tabs'><a id='pageName' onclick='return openPage.call(this)'>home.py</a> <a id='home.py' class='exit' onclick='return exitWindow.call(this);' target='_blank' style='color: #858585;'>x</a></li>"
-    }
-}
+// FAILSAFE, ONLY USE IF U CAN DELETE HOME PAGE
+// function home() {
+//     var openedTabs = document.getElementsByClassName("tabs");
+//     var ids = Array.from(openedTabs).map((element) => element.lastChild.id);
+//     if (!ids.includes("home.py")){ //muy cutre sry
+//         document.getElementById("navTable").innerHTML+= "<li id='' class='tabs'><a id='pageName' onclick='return openPage.call(this)'>home.py</a> <a id='home.py' class='exit' onclick='return exitWindow.call(this);' target='_blank' style='color: #858585;'>x</a></li>"
+//     }
+// }
+
+
 function createTabs(name){ //name with .py
     var tab = document.getElementById("selected");
     const clone = tab.cloneNode(true);

@@ -1,5 +1,5 @@
 // how many more lines do we have at the end
-const wiggleroom = 2
+const wiggleroom = 0
 // function to create a list item for each line of content
 function createNumber(i) {
   const li = document.createElement("li");
@@ -28,7 +28,7 @@ function updateNumbers() {
   if (window.innerWidth <= 600) {
     lineHeight =  2.8;
   }
-  const numLines = Math.floor(contentSizeVH / lineHeight);
+  const numLines = Math.round(contentSizeVH / lineHeight);
   // remove any existing list items from the numbers list
   clearNumbers();
 
@@ -38,6 +38,7 @@ function updateNumbers() {
   }
 }
 
+updateNumbers();
 
 // debounce function
 function debounce(func, delay) {
@@ -53,4 +54,4 @@ function debounce(func, delay) {
 }
 
 // add a resize event listener to update the list of numbers when the window is resized
-window.addEventListener("resize", debounce(updateNumbers, 500));
+window.addEventListener("resize", debounce(updateNumbers, 250));
